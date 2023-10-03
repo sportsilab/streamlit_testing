@@ -22,7 +22,8 @@ df_short = df[['FAN_GROUPING', 'CATEGORY', 'SUBCATEGORY', 'FAN_COUNT', 'MEDIAN_S
 
 option = st.selectbox(
     'Which DC team would you like to compare to the general population?',
-    ('dc_united', 'washington_capitals', 'washington_commanders', 'washington_mystics', 'washington_nationals', 'washington_spirit', 'washington_wizards'))
+    ('dc_united', 'washington_capitals', 'washington_commanders', 'washington_mystics', 'washington_nationals', 'washington_spirit', 'washington_wizards')
+)
 
 
 df_total = pd.merge(df_main, df_short[df_short.FAN_GROUPING == option], on = "SUBCATEGORY")
